@@ -11,9 +11,7 @@ const Activity=({handle,handledel,item})=>{
    (item.length) ? 
    
    (
-
-     
-        <ul>
+  <ul>
             {item.map((item) => 
             (
 
