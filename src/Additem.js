@@ -1,7 +1,7 @@
 import React from "react"
 import {FaPlus} from 'react-icons/fa'
 import "./index.css"
-import  { useState,useRef } from "react";
+import  { useRef } from "react";
 
 const Additem=({val,setval})=>{
  let inputRef=useRef();
