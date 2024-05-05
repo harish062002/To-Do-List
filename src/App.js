@@ -29,7 +29,7 @@ function App() {
 
  
 useEffect(()=>{
-  JSON.parse(localStorage.getItem("todo"))
+  setitem(JSON.parse(localStorage.getItem("todo")))
 },[])
 
 
