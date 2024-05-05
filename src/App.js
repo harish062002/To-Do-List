@@ -5,15 +5,16 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Additem from "./Additem";
 import Search from "./Search"
-import apirequest from "./Api request";
+
 
 
 
 
 function App() {
 
-  let API="http://localhost:3500/items"
+
   let [item,setitem]= useState(
+    []
     // [
       
     //     {
@@ -29,27 +30,11 @@ function App() {
     
       
     // ]
-    JSON.parse(localStorage.getItem("todo"))
+   
   );
- 
-    
-
-// useEffect(()=>{
-//   let fetchdata=()=>{
-//     try{
-//     fetch(API)
-//     .then((respose) => respose.json())
-//     .then((result) => setitem(result))
-//     console.log(item)
-    
-//   }
-//   catch (error)
-//   {
-//     console.log(error.stack)
-//   }
-//   }
-//   fetchdata();
-// },[])
+useEffect(()=>{
+  JSON.parse(localStorage.getItem("todo"))
+},[])
 
 
 // add item
@@ -156,7 +141,7 @@ let handle_search=(e)=>{
       
       />
       <Activity  
-      item={item.filter(item =>  (item.item) . includes(searchval))}
+      item={item.filter(item =>  (item.item).includes(searchval))}
       handle={handle}
       handledel={handledel}
       
