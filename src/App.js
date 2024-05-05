@@ -4,17 +4,12 @@ import Activity from "./Activity";
 import Header from "./Header";
 import Footer from "./Footer";
 import Additem from "./Additem";
-import Search from "./Search"
-
-
-
-
+import Search from "./Search";
 
 function App() {
 
-
   let [item,setitem]= useState(
-    []
+    []  );
     // [
       
     //     {
@@ -31,7 +26,8 @@ function App() {
       
     // ]
    
-  );
+
+ 
 useEffect(()=>{
   JSON.parse(localStorage.getItem("todo"))
 },[])
@@ -48,8 +44,7 @@ let id1= item.length ? item[item.length -1 ].id
 let newobj={id:id1,checked:false,item:item1}
 
  let listitems=[...item,newobj]
-
-
+ 
 setitem(listitems)
 
 // let object={
@@ -67,7 +62,13 @@ localStorage.setItem("todo",JSON.stringify(listitems))
 }
 
 
-
+let handlesubmit=(e)=>{
+    e.preventDefault()
+  
+    
+    add(val)
+    setval('')
+}
 
 //activity
 let  handle =(id)=>{
