@@ -3,7 +3,7 @@ import {FaPlus} from 'react-icons/fa'
 import "./index.css"
 import  { useRef } from "react";
 
-const Additem=({val,setval})=>{
+const Additem=({val,setval,handlesubmit})=>{
  let inputRef=useRef();
     return(
         <form className="addForm" onSubmit={handlesubmit}>
