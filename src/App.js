@@ -67,13 +67,7 @@ localStorage.setItem("todo",JSON.stringify(listitems))
 }
 
 
-let handlesubmit=(e)=>{
-    e.preventDefault()
-  
-    
-    add(val)
-    setval('')
-}
+
 
 //activity
 let  handle =(id)=>{
@@ -121,12 +115,7 @@ localStorage.setItem("todo",JSON.stringify(listitems))
 let [searchval,setsearch]=useState('');
 
 
-let handle_search=(e)=>{
-  e.preventDefault();
-  // search1(searchval);
-  setsearch('')
- 
-}
+
   return(
    <div>
       <Header title= "to do list"/>
