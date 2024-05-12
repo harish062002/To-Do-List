@@ -29,8 +29,8 @@ function App() {
 
  
 useEffect(()=>{
-  setitem(JSON.parse(localStorage.getItem("todo")))
-},[])
+  JSON.parse(localStorage.getItem("todo"))
+},[post])
 
 
 // add item
