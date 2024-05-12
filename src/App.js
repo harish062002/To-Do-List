@@ -30,7 +30,7 @@ function App() {
  
 useEffect(()=>{
   JSON.parse(localStorage.getItem("todo"))
-},[post])
+},[item])
 
 
 // add item
