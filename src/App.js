@@ -28,10 +28,13 @@ function App() {
    
 
  
-useEffect(()=>{
-  JSON.parse(localStorage.getItem("todo"))
-},[item])
 
+useEffect(()=>{
+  
+let x=JSON.parse(localStorage.getItem("todo"));
+(!x)?(  localStorage.setItem('todo',JSON.stringify([  ]) )                           
+ ): setitem(JSON.parse(localStorage.getItem("todo")))
+},[])
 
 // add item
 let [val,setval]=useState('');
